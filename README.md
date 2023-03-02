@@ -61,6 +61,8 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+Closure functions are functions that are nested inside of other functions. The inner function has access to the outer function's variables.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -82,8 +84,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+The closure in this code is used in the personalDice function. You can tell because the inner function has access to the outer function's variables.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+dansRoll is always the same because it is a function. The newRoll variable could change because it is a random number.
+
 c. What is the lexical scope of `newRoll`? 
+The lexical scope of newRoll is the personalDice function.
 
 
 ### Task 3 - Stretch Goals
