@@ -185,6 +185,17 @@ function scoreboard(getInningScoreCallback, inningCallback, numInnings) {
     let homeScore = cur.split(":")[1].split("-")[1].trim();
     return acc + parseInt(homeScore);
   } , 0);
+  
+  // Check if there is a tie and add the appropriate message to the end of the array
+
+  if (totalAwayScore === totalHomeScore) {
+    let tieMessage = `This game will require extra innings: Away ${totalAwayScore} - Home ${totalHomeScore}`;
+    scoreArray.push(tieMessage);
+  } else {
+    let finalMessage = `Final Score: Away ${totalAwayScore} - Home ${totalHomeScore}`;
+    scoreArray.push(finalMessage);
+  }
+  return scoreArray;
 }
 
 
