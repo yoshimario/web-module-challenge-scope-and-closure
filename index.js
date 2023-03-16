@@ -181,6 +181,10 @@ function scoreboard(getInningScoreCallback, inningCallback, numInnings) {
     return acc + parseInt(awayScore);
   }, 0);
   
+  let totalHomeScore = scoreArray.reduce((acc, cur) => {
+    let homeScore = cur.split(":")[1].split("-")[1].trim();
+    return acc + parseInt(homeScore);
+  } , 0);
 }
 
 
