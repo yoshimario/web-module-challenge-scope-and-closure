@@ -165,7 +165,13 @@ Use the scoreboard function below to do the following:
 ] */
 // NOTE: There is no test associated with this code; if your output matches the given example, consider it complete!
 function scoreboard(getInningScoreCallback, inningCallback, numInnings) {
-  ket scoreArray = [];
+  let scoreArray = [];
+  for (let i = 0; i < numInnings; i++) {
+    let inningScore =  getInningScoreCallback(inningCallback);
+    let inningString = `Inning ${i + 1}: Away ${inningScore.Away} - Home ${inningScore.Home}`;
+    scoreArray.push(inningString);
+  }
+  
 }
 
 
